@@ -5,7 +5,7 @@ data=$(date +%Y-%m-%d)
 branch=$(git branch)
 branch=${branch: -10}
 
-if [ $branch != $data ];
+if [ "$branch" != "$data" ];
 	then
 	
 	echo -e "\n\nFazendo checkout para novo branch...\n\n"

@@ -28,6 +28,8 @@ fi
 
 	echo -e "\n\nPronto!\n\n"
 
+read
+
 exit
 
 $SHELL

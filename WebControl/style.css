@@ -1,7 +1,18 @@
-.logo{
+body{
 
-    flex-grow: inherit;
-    height: 2%;
-    width: 4%;
+    background-color: white;
+    color: black;
+
+}
+
+.icon{
+
+    color: black;
+
+}
+
+section.funCards{
+
+    margin: auto;
 
 }

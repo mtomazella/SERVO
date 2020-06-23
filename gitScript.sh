@@ -1,34 +1,14 @@
 #!/bin/bash
 
 data=$(date +%Y-%m-%d)
-
-branch=$(git branch)
-branch=${branch: -10}
-
-if [ "$branch" != "$data" ];
-	then
 	
-	echo -e "\n\nFazendo checkout para novo branch...\n\n"
-	git checkout -b $data
-
-fi
-
 	echo -e "\nAdicionando arquivos...\n"
 	git add *
-
-	info="info"
-	echo -e "\nDescreva as mudanças\n"
-	read -e info
-
-	echo -e "\n\nFazendo commit...\n\n"
-	git commit -m $data" edit"
-
+	echo -e "\nFazendo commit...\n"
+	git commit -m $data
 	echo -e "\n\nFazendo push...\n\n"
-	git push origin $data
-
+	git push origin master
 	echo -e "\n\nPronto!\n\n"
-
-read
 
 exit
 

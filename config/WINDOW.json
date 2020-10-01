@@ -1,0 +1,13 @@
+{
+    "defaultConfig": {
+        "width": 800,
+        "height": 600,
+        "backgroundColor": "#111111",
+        "tittle": "SERVO",
+        "darkTheme": false,
+        "tittleBarStyle": "hidden",
+        "webPreferences": {
+            "nodeIntegration": true
+        }
+    }
+}

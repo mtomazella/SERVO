@@ -1,0 +1,3 @@
+Json DB - https://www.npmjs.com/package/node-json-db
+Text-Speech - https://www.npmjs.com/package/text-to-speech-js
+Speech-text - https://www.npmjs.com/package/speech-to-text

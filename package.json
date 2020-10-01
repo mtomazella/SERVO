@@ -1,0 +1,26 @@
+{
+  "name": "servo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheustomazella/SERVO.git"
+  },
+  "author": "Matheus Tomazella",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheustomazella/SERVO/issues"
+  },
+  "homepage": "https://github.com/matheustomazella/SERVO#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "custom-electron-titlebar": "^3.2.4",
+    "electron": "^10.1.3",
+    "espeak": "0.0.3"
+  }
+}

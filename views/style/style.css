@@ -1,0 +1,143 @@
+:root{
+    font-family: 'Times New Roman', Times, serif;
+    --bg-primary: #161616;
+    --bg-secondary:  #1d1d1d;
+    --text-primary: #afafaf;
+    --text-secondary: #f0f0f0;
+    --cyan-blue: #02aeb4;
+    --cyan-blue-darker: #007e83;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--bg-secondary);
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #202020;
+}
+
+.fontawesome{
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    font-style: normal;
+    color: var(--text-secondary);
+}
+
+section.app{
+    display: flex; 
+    flex-direction: row;
+    background-color: var(--bg-primary);
+}
+
+section.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    background-color:var(--bg-secondary); 
+    height: 100vh;
+}
+
+div.menu-mainIcon{
+    height: fit-content;
+}
+
+img.menu-mainIcon{
+    width: 5rem;
+    margin: 1rem 0 1rem 0;
+    transform: rotate( );
+}
+
+div.menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+button.menu-item{
+    background-color: var(--bg-secondary);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    color: var(--text-primary);
+    text-align: center;
+    border: none;
+}
+
+button.menu-item:hover{
+    transition-duration: 0.1s;
+    color: var(--text-secondary);
+}
+
+button.menu-item:focus{
+    outline: none;
+}
+
+i.menu-icon{
+    font-size: 1.5rem;
+    margin: 0 1rem 0 1rem;
+}
+
+section.chat{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+div.screen{
+    height: 92vh;
+    overflow-y: auto;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    outline: none;
+}
+
+div.input{
+    display: flex;
+    flex-direction: row;
+}
+
+input.input{
+    height: 8vh;
+    padding: 0.5rem;
+}
+
+button.input{
+    border: none;
+    outline: none;
+    background-color: var(--cyan-blue);
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+button.input:hover{
+    background-color: var(--cyan-blue-darker);
+}
+
+button.input:focus{
+    outline: none;
+}
+
+div.message{
+    background-color: var(--bg-secondary);
+    padding: 0.7rem 1rem 0.7rem 1rem;
+    color: var(--text-primary);
+    width: fit-content;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    align-self: flex-end;
+}
+
+div.servo{
+    background-color: var(--cyan-blue-darker);
+    color: var(--text-secondary);
+    align-self: flex-start;
+}

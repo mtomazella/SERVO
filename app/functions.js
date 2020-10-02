@@ -1,51 +1,36 @@
 const { exec } = require( 'child_process' );
+const { tree } = require( './database' )
 
-module.exports = { 
-    tree: {
-        open: {
-            keywords: [ 'open', 'abrir', 'abra', 'abre', 'iniciar', 'inicie', 'start' ],
-            func: ( command, branch ) =>{
-                const url = find( command, branch );
-                if ( url.code != undefined ){
-                    return 'Não encontrei. Adicione para usar essa função';
+const functions = {
+    open: {
+        keywords: [ 'open', 'abrir', 'abra', 'abre', 'iniciar', 'inicie', 'start' ],
+        func: ( command, branch ) =>{
+            const url = find( command, tree.obj.open );
+            if ( url.code != undefined ){
+                return 'Não encontrei. Adicione para usar essa função';
+            }
+            exec( `start ${url}`, ( error ) => {
+                if ( error ) { 
+                    console.log( error );
+                    return error;
                 }
-                exec( `start ${url}`, ( error ) => {
-                    if ( error ) { 
-                        console.log( error );
-                        return error;
-                    }
-                } )
-                return 'Beleza fião';
-            },
-            explorer: {
-                keywords: [ 'files', 'arquivos', 'windows', 'explorer', 'explorer', 'explorar', 'explorador', 'documentos', 'documents' ],
-                url: 'explorer'
-            },
-            youtube: {
-                keywords: [ 'youtube', 'yt' ],
-                url: 'https://youtube.com'
-            },
-            twitch: {
-                keywords: [ 'twitch' ],
-                url: 'https://www.twitch.tv'
-            }
-        },
-        search: {
-            keywords: [ 'pesquisar', 'search', 'pesquisa', 'procura', 'olha' ],
-            func: ( command, branch ) => {
-                const query = command.split( ' ' ).slice( 1 ).join( '+' );
-                const url = 'https://google.com/search?q=' + query;
-                exec( `start ${ url }` );
-                return `Pesquisando ${ query.split( '+' ).join( ' ' ) } no Guglis`;
-            }
-        }  
+            } )
+            return 'Beleza fião';
+        }
     },
+    search: {
+        keywords: [ 'pesquisar', 'search', 'pesquisa', 'procura', 'olha' ],
+        func: ( command ) => {
+            const query = command.split( ' ' ).slice( 1 ).join( '+' );
+            const url = 'https://google.com/search?q=' + query;
+            exec( `start ${ url }` );
+            return `Pesquisando ${ query.split( '+' ).join( ' ' ) } no Guglis`;
+        }
+    }  
+}
 
-
-
-
-
-
+module.exports = {
+    functions,
     findFunc: ( command, branch ) => {
         const next = { 
             branch: undefined,

@@ -2,12 +2,13 @@ const { ipcRenderer }   = require( 'electron' );
 const nodeConsole       = require( 'console' );
 const console           = new nodeConsole.Console(process.stdout, process.stderr);
 
+changeWindow( 'home' );
+
 /* Send Message */
 
 document.addEventListener( 'keydown', ( event ) => {
     if ( event.keyCode == 13 ) userSend( );
 } )
-
 
 function userSend ( ) {
     const input = document.getElementById( 'input' );

@@ -127,11 +127,17 @@ button.input:focus{
 }
 
 div.message{
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    text-align: justify;
     background-color: var(--bg-secondary);
     padding: 0.7rem 1rem 0.7rem 1rem;
     color: var(--text-primary);
+    max-width: 80%;
     width: fit-content;
     border-radius: 0.4rem;
+    border-top-right-radius: 0;
     margin-top: 1rem;
     align-self: flex-end;
 }
@@ -140,4 +146,10 @@ div.servo{
     background-color: var(--cyan-blue-darker);
     color: var(--text-secondary);
     align-self: flex-start;
+    border-top-right-radius: 0.4rem;
+    border-top-left-radius: 0;
 }
+
+/* Functions Page */
+
+button.collapsable{}

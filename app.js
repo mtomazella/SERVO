@@ -3,8 +3,7 @@ const app           = electron.app;
 const path          = require( 'path' );
 const WINDOWconfig  = require( './config/WINDOW.json' );
 const { Bridge }    = require( './coms/bridge' );
-
-const { ipcMain } = require('electron');
+const { ipcMain }   = require('electron');
 
 const { createWindow } = require( './app/electron' );
 

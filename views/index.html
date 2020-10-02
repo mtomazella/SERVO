@@ -19,6 +19,9 @@
   <body class="container col-12 m-0 p-0">
 
     <section class="app p-0 m-0 col-12">
+
+      <!-- Menu -->
+
       <section class="menu p-0 m-0 col-4">
         <div class="menu-mainIcon">
           <img class="menu-mainIcon" alt="Logo" src="../img/logo2.png">
@@ -32,6 +35,9 @@
           </button>
         </div>
       </section>
+
+      <!-- Home Page -->
+
       <section class="content p-0 m-0 col-8" id="home">
         <div class="screen" id="screen">  </div>
         <div class="input">
@@ -39,8 +45,14 @@
           <button class="input col-2" id="send" onclick="userSend()"><i class="fontawesome send-icon">  </i></button>
         </div>
       </section>
-      <section class="content p-0 m-0 col-8" id="functions">
 
+      <!-- Functions Page -->
+
+      <section class="content p-0 m-0 col-8" id="functions">
+        <button type="button" class="collapsible">Categories</button>
+        <div class="content">
+          <p>Lorem ipsum...</p>
+        </div>
       </section>
     </section>
 
@@ -48,11 +60,28 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <!-- Popper.js -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax\/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <!-- Bootstrap Js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
   
     <script src="../src/Men.js">  </script>
     <script src="../src/chat.js"> </script>
+
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+            content.style.display = "none";
+          } else {
+            content.style.display = "block";
+          }
+        });
+      }
+    </script>
   </body>
 </html>

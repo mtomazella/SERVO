@@ -4,8 +4,8 @@
         "height": 600,
         "backgroundColor": "#111111",
         "tittle": "SERVO",
-        "darkTheme": false,
         "tittleBarStyle": "hidden",
+        "darkTheme": true,
         "webPreferences": {
             "nodeIntegration": true
         }

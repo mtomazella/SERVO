@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require( 'electron' );
-const WINDOWconfig = require( './../config/WINDOW.json' );
+const WINDOWconfig = require( '../config/WINDOW.json' );
 
 module.exports = {
     createWindow: ( view = 'index', config ) => {
@@ -9,6 +9,3 @@ module.exports = {
         return window;
     }
 }
-
-https://www.electronjs.org/docs/api/ipc-main
-https://www.electronjs.org/docs/api/ipc-renderer

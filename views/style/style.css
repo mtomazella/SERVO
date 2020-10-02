@@ -82,7 +82,7 @@ i.menu-icon{
     margin: 0 1rem 0 1rem;
 }
 
-section.chat{
+section.content{
     display: flex;
     flex-direction: column;
     height: 100vh;

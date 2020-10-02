@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,23 +21,26 @@
     <section class="app p-0 m-0 col-12">
       <section class="menu p-0 m-0 col-4">
         <div class="menu-mainIcon">
-          <img class="menu-mainIcon" src="../img/logo2.png">
+          <img class="menu-mainIcon" alt="Logo" src="../img/logo2.png">
         </div>
         <div class="menu m-0 p-0">
-          <button class="menu-item m-0">
+          <button class="menu-item m-0" onclick="changeWindow('home')">
             Home
           </button>
-          <button class="menu-item m-0">
+          <button class="menu-item m-0" onclick="changeWindow('functions')">
             Funções
           </button>
         </div>
       </section>
-      <section class="chat p-0 m-0 col-8">
+      <section class="content p-0 m-0 col-8" id="home">
         <div class="screen" id="screen">  </div>
         <div class="input">
           <input class="input col-10" id="input" type="text" placeholder="Tell me what you want">
           <button class="input col-2" id="send" onclick="userSend()"><i class="fontawesome send-icon">  </i></button>
         </div>
+      </section>
+      <section class="content p-0 m-0 col-8" id="functions">
+
       </section>
     </section>
 
@@ -49,6 +52,7 @@
     <!-- Bootstrap Js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
   
-    <script src="../src/chat.js"></script>
+    <script src="../src/Men.js">  </script>
+    <script src="../src/chat.js"> </script>
   </body>
 </html>

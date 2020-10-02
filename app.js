@@ -1,10 +1,12 @@
-const electron      = require('electron')
+const electron      = require( 'electron' );
 const app           = electron.app;
-const url           = require( 'url' );
 const path          = require( 'path' );
 const WINDOWconfig  = require( './config/WINDOW.json' );
+const { Bridge }    = require( './coms/bridge' );
 
-const { createWindow } = require( './src/electron' );
+const { ipcMain } = require('electron');
+
+const { createWindow } = require( './app/electron' );
 
 const logo = path.join( __dirname, 'img/logo2.png' );
 
@@ -45,6 +47,11 @@ app.whenReady()
         }
     } );*/
     
+    /* Setting Up Communication */
+
+    const bridge = new Bridge( ipcMain );
+    bridge.set_window( 'main', MainWindow );
+
 } )
 .catch( ( error ) => {
     console.log( error );

@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "repository": {
     "type": "git",
@@ -17,10 +19,26 @@
     "url": "https://github.com/matheustomazella/SERVO/issues"
   },
   "homepage": "https://github.com/matheustomazella/SERVO#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "electron": "^10.1.3",
+    "electron-builder": "^22.8.1",
+    "electron-builder-squirrel-windows": "^22.9.1"
+  },
+  "build": {
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    },
+    "extraFiles": [
+      {
+        "from": "database",
+        "to": "database",
+        "filter": "**/*"
+      }
+    ]
+  },
   "dependencies": {
     "custom-electron-titlebar": "^3.2.4",
-    "electron": "^10.1.3",
     "espeak": "0.0.3"
   }
 }

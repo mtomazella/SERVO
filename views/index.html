@@ -49,11 +49,24 @@
       <!-- Functions Page -->
 
       <section class="content p-0 m-0 col-8" id="functions">
-        <button type="button" class="collapsible">Categories</button>
-        <div class="content">
-          <p>Lorem ipsum...</p>
+        <textarea class="editor" id="editor" spellcheck="false">
+        </textarea>
+        <div class="editor-buttons">
+          <div class="error" id="errorDiv">
+            <div class="errorLabel" id="error">undefined</div>
+            <button class="error" id="close" onclick="closeError()"> <i class="fontawesome">  </i> </button>
+          </div>
+          <div class="buttons">
+            <button class="editor" onclick="saveFunctionsObject()" id="save">Save</button>
+            <button class="editor white" id="undo" onclick="undoFunctionsObject()">Undo</button>
+            <button class="editor white" id="find" onclick="
+              document.getElementById( 'findInput' ).click();
+            ">Find</button>
+            <input type="file" id="findInput" style="display: none;" onchange="pasteUrl()">
+          </div>
         </div>
       </section>
+      
     </section>
 
 
@@ -64,8 +77,9 @@
     <!-- Bootstrap Js -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
   
-    <script src="../src/Men.js">  </script>
-    <script src="../src/chat.js"> </script>
+    <script src="../src/Backup.js"> </script>
+    <script src="../src/Men.js">    </script>
+    <script src="../src/chat.js">   </script>
 
     <script>
       var coll = document.getElementsByClassName("collapsible");
@@ -82,6 +96,13 @@
           }
         });
       }
+    </script>
+
+    <script>
+      const editor = document.getElementById( 'editor' )
+      const backup = new Backup( );
+      changeWindow( 'home' );
+      loadFunctionsObject( );
     </script>
   </body>
 </html>

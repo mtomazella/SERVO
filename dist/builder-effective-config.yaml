@@ -1,0 +1,12 @@
+directories:
+  output: dist
+  buildResources: build
+win:
+  target: squirrel
+  icon: build/icon.ico
+extraFiles:
+  - from: database
+    to: database
+    filter:
+      - '**/*'
+electronVersion: 10.1.3

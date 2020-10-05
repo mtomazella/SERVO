@@ -1,20 +1,22 @@
-const { exec } = require( 'child_process' );
+const { execFile, exec } = require( 'child_process' );
 const { tree } = require( './database' )
 
 const functions = {
     open: {
         keywords: [ 'open', 'abrir', 'abra', 'abre', 'iniciar', 'inicie', 'start' ],
         func: ( command, branch ) =>{
+            tree.fetch( );
             const url = find( command, tree.obj.open );
             if ( url.code != undefined ){
                 return 'Não encontrei. Adicione para usar essa função';
             }
-            exec( `start ${url}`, ( error ) => {
+            if ( url.indexOf( ':' ) == 1 ) execFile( url );
+            else exec( `start ${url}`, ( error ) => {
                 if ( error ) { 
                     console.log( error );
                     return error;
                 }
-            } )
+            } );
             return 'Beleza fião';
         }
     },

@@ -80,6 +80,8 @@
     <script src="../src/Backup.js"> </script>
     <script src="../src/Men.js">    </script>
     <script src="../src/chat.js">   </script>
+    <script src="../node_modules/artyom.js/build/artyom.window.min.js"> </script>
+    <script src="../src/recog.js">  </script>
 
     <script>
       var coll = document.getElementsByClassName("collapsible");
@@ -103,6 +105,7 @@
       const backup = new Backup( );
       changeWindow( 'home' );
       loadFunctionsObject( );
+      initRecognition( );
     </script>
   </body>
 </html>

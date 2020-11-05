@@ -52,11 +52,11 @@ editor.addEventListener( 'keydown', ( event ) => {
     }
     else if ( event.key == '{' ){
         event.preventDefault();
-        setTimeout( insertAtCaret( 'editor', '{\n\n}' ), 10000 );
+        insertAtCaret( 'editor', '{\n\n}' );
     }
     else if ( event.key == '[' ){
         event.preventDefault();
-        setTimeout( insertAtCaret( 'editor', '[\n\n]' ), 10000 );
+        insertAtCaret( 'editor', '[\n\n]' );
     }
 } )
 

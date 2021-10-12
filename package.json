@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/matheustomazella/SERVO#readme",
   "devDependencies": {
-    "electron": "^10.1.3",
+    "electron": "^11.5.0",
     "electron-builder": "^22.8.1",
     "electron-builder-squirrel-windows": "^22.9.1"
   },
